@@ -11,6 +11,18 @@ export default createGlobalStyle`
         outline: 0;
         box-sizing: border-box;
     }
+    html {
+    overflow: scroll;
+    overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+        width: 0px;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+    /* Optional: show position indicator in red */
+    ::-webkit-scrollbar-thumb {
+        background: #FF0000;
+    }
 
     *:focus{
         outline: 0;
@@ -23,7 +35,10 @@ export default createGlobalStyle`
     body{
         -webkit-font-smoothing: antialised;
     }
-
+    input
+    {
+        border: 0;
+    }
     body,input,button
     {
         font-family: 'Roboto', sans-serif;
